@@ -36,6 +36,7 @@ db_config.py*
 *.ini
 .idea
 .git
+.DS_Store
 
 # flask_session
 /*session/

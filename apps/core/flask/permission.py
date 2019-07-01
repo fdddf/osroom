@@ -143,7 +143,7 @@ def custom_url_permissions(url=None, method="GET"):
         method = request.c_method
 
     url_per = get_sys_url(url=url.rstrip("/"))
-    if url_per and method in url_per["custom_permission"]:
+    if url_per and url_per != 'null' and method in url_per["custom_permission"]:
         return url_per["custom_permission"][method]
 
 
@@ -157,7 +157,7 @@ def custom_url_login_auth(url=None, method="GET"):
         method = request.c_method
 
     url_per = get_sys_url(url=url.rstrip("/"))
-    if url_per and url_per["type"] != "page" and method in url_per["login_auth"]:
+    if url_per and url_per != 'null' and url_per["type"] != "page" and method in url_per["login_auth"]:
         return url_per["login_auth"][method]
 
 

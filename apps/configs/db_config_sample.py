@@ -1,51 +1,54 @@
 # -*-coding:utf-8-*-
 __author__ = "Allen Woo"
+
+import os
+
 DB_CONFIG = {
     "redis": {
         "host": [
-            "127.0.0.1"
+            os.getenv('REDIS_HOST', '127.0.0.1')
         ],
-        "password": "<Your password>",
+        "password": os.getenv('REDIS_PASSWORD', ''),
         "port": [
-            "6379"
+            os.getenv('REDIS_PORT', 6379)
         ]
     },
     "mongodb": {
         "web": {
-            "dbname": "osr_web",
-            "password": "<Your password>",
+            "dbname": os.getenv('MONGODB_WEB_DB', 'osr_web'),
+            "password": os.getenv('MONGODB_WEB_PWD', ''),
             "config": {
                 "fsync": False,
                 "replica_set": None
             },
             "host": [
-                "127.0.0.1:27017"
+                os.getenv('MONGODB_WEB_HOST', '127.0.0.1:27017')
             ],
-            "username": "root"
+            "username": os.getenv('MONGODB_WEB_USER', 'root')
         },
         "user": {
-            "dbname": "osr_user",
-            "password": "<Your password>",
+            "dbname": os.getenv('MONGODB_USER_DB', 'osr_user'),
+            "password": os.getenv('MONGODB_USER_PWD', ''),
             "config": {
                 "fsync": False,
                 "replica_set": None
             },
             "host": [
-                "127.0.0.1:27017"
+                os.getenv('MONGODB_USER_HOST', '127.0.0.1:27017')
             ],
-            "username": "root"
+            "username": os.getenv('MONGODB_USER_USER', 'root')
         },
         "sys": {
-            "dbname": "osr_sys",
-            "password": "<Your password>",
+            "dbname": os.getenv('MONGODB_SYS_DB', 'osr_sys'),
+            "password": os.getenv('MONGODB_SYS_PWD', ''),
             "config": {
                 "fsync": False,
                 "replica_set": None
             },
             "host": [
-                "127.0.0.1:27017"
+                os.getenv('MONGODB_SYS_HOST', '127.0.0.1:27017')
             ],
-            "username": "root"
+            "username": os.getenv('MONGODB_SYS_USER', 'root')
         }
     }
 }

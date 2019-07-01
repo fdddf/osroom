@@ -11,7 +11,7 @@ osroom管理端->主题展示设置->图文里添加或修改，删除
             <div class="osr-image text-center">
                 <a target="_blank" :href="ad.link">
                     <img v-if="ad.url" class="osr-media-img" :src="ad.url+img_w_h" :alt="ad.title">
-                    <img v-else class="osr-media-img" src="" :alt="ad.title">
+                    <img v-else class="osr-media-img" src="http://placehold.it/300x200" :alt="ad.title">
                      <span v-if="ad.title" class="osr-img-title"  :title="ad.title">
                          {[ad.title]}
                      </span>

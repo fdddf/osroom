@@ -13,7 +13,7 @@ from apps.configs.sys_config import PLUG_IN_CONFIG_CACHE_KEY, PLUG_IN_FOLDER
 from apps.core.flask.reqparse import arg_verify
 from apps.core.plug_in.manager import plugin_manager
 from apps.core.utils.get_config import get_config
-from apps.utils.async.async import async_process
+from apps.utils.async_util.async_util import async_process
 from apps.utils.pyssh.pyssh import audit_host_info, MySSH
 
 __author__ = "Allen Woo"

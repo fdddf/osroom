@@ -392,7 +392,7 @@ CONFIG = {
     "py_venv": {
         "VENV_PATH": {
             "sort": 99,
-            "value": "/home/work/project/venv3",
+            "value": "/Users/hijack/Sites/51haowu.com/venv",
             "type": "string",
             "info": "python虚拟环境路径"
         }
@@ -496,10 +496,7 @@ CONFIG = {
         "__sort__": 6,
         "DEFAULT_AVATAR": {
             "sort": 99,
-            "value": [
-                "/static/admin/sys_imgs/avatar_default_1.png",
-                "/static/admin/sys_imgs/avatar_default_2.png"
-            ],
+            "value": "/static/sys_imgs/avatar_default.png",
             "type": "string",
             "info": "新注册用户默认头像的URL"
         },
@@ -720,7 +717,7 @@ CONFIG = {
         "__info__": "主题配置",
         "CURRENT_THEME_NAME": {
             "sort": 99,
-            "value": "osr-style-w",
+            "value": "osr-theme-w",
             "type": "string",
             "info": "当前主题名称,需与主题主目录名称相同"
         }

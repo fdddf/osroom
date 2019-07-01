@@ -3,7 +3,7 @@ import time
 from flask import request
 from apps.app import mdbs, cache
 from apps.core.utils.get_config import get_config
-from apps.utils.async.async import async_process
+from apps.utils.async_util.async_util import async_process
 from apps.utils.format.obj_format import json_to_pyseq, str_to_num
 
 __author__ = 'Allen Woo'

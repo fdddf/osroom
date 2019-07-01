@@ -5,7 +5,7 @@ import os
 from flask_mail import Message
 from apps.core.plug_in.manager import plugin_manager
 from apps.core.utils.get_config import get_config
-from apps.utils.async.async import async_process
+from apps.utils.async_util.async_util import async_process
 from apps.app import mail, app, mdbs
 
 __author__ = 'woo'

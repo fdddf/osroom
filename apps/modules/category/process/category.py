@@ -6,7 +6,7 @@ from flask_babel import gettext
 from flask_login import current_user
 
 from apps.core.flask.reqparse import arg_verify
-from apps.utils.async.async import async_thread
+from apps.utils.async_util.async_util import async_thread
 from apps.utils.format.obj_format import objid_to_str, json_to_pyseq
 from apps.utils.validation.str_format import short_str_verifi
 from apps.app import mdbs

@@ -2,6 +2,7 @@
 import base64
 from functools import wraps
 import time
+import json
 from flask import current_app, request
 from apps.utils.format.obj_format import json_to_pyseq
 
@@ -201,7 +202,7 @@ class Cache:
 
         if not db_type:
             if self.config["CACHE_TYPE"] == "redis":
-                self.redis.set(key, value, ex=ex)
+                self.redis.set(key, json.dumps(value), ex=ex)
                 return value
             else:
 
@@ -218,7 +219,7 @@ class Cache:
 
         else:
             if db_type == "redis":
-                self.redis.set(key, value, ex=ex)
+                self.redis.set(key, json.dumps(value), ex=ex)
                 return value
 
             elif db_type == "mongodb":
